@@ -52,4 +52,12 @@ del juego.
 ![Pantalla 1](images/ss1.png)
 ![Pantalla 2](images/ss2.png)
 
+---
+
+# Claúsula de IA
+
+Todo el proyecto fue realizado con las diapositivas del maestro y con su ayuda. Utilicé la IA solo para la refactorización del código, es decir, para su identación. Además de para consultar como colocar imagenes en un README.
+
+
+
 
