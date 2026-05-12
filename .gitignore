@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+.vscode/
+*.user
+*.suo
+*.sln.cache
+
+# Build
+bin/
+obj/
+*.dll
+*.exe
+
+# IDE
+.idea/
+*.sln.iml
+
+# OS
+.DS_Store
+Thumbs.db
