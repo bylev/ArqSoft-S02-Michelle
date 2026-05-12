@@ -49,7 +49,7 @@ del juego.
 
 # Funcionamiento
 
-![image](images\ss1.png)
-![image](images\ss2.png)
+![Pantalla 1](images\ss1.png)
+![Pantalla 2](images\ss2.png)
 
 
