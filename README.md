@@ -49,7 +49,7 @@ del juego.
 
 # Funcionamiento
 
-![image](C:\Users\wonho\source\repos\Ahorcado\images\ss1.png)
-![image](C:\Users\wonho\source\repos\Ahorcado\images\ss2.png)
+![image](\images\ss1.png)
+![image](\images\ss2.png)
 
 
