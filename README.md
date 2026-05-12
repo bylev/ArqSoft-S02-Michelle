@@ -32,3 +32,7 @@ MotorAhorcado no tiene ni una línea de Console. Solo sabe jugar lo que resuelve
 
 La interfaz de usuario se ha separado del motor del juego, lo que permite una mayor flexibilidad y mantenibilidad. La clase *InterfazUsuario* es responsable de interactuar con el usuario, mostrar mensajes y dibujar el tablero, mientras que la clase *Juego* se encarga de la lógica del juego. Esto cumple con el principio de responsabilidad única (SRP) y permite que la interfaz de usuario pueda ser modificada o mejorada sin afectar la lógica del juego.
 
+--- 
+
+# Agregar un nuevo juego
+Para agregar un nuevo juego, se puede crear una nueva clase que implemente la interfaz *IJuego* y luego modificar la clase *InterfazUsuario* para permitir al usuario seleccionar el juego que desea jugar. Esto se puede hacer sin modificar la clase *Juego*, lo que cumple con el principio de abierto/cerrado (OCP). De esta manera, se pueden agregar nuevos juegos sin afectar el código existente, lo que mejora la mantenibilidad y escalabilidad del proyecto.
