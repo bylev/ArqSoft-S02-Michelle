@@ -7,5 +7,6 @@ namespace Ahorcado
     internal interface IRepositorioPalabras
     {
         string ObtenerPalabraAleatoria();
+        string ObtenerCategoria();
     }
 }
