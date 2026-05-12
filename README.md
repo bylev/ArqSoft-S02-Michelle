@@ -1,1 +1,3 @@
-# Crear la clase GOD
+# Ahorcado 
+
+Un juego sencillo escrito en C#
