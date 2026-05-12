@@ -125,6 +125,13 @@ namespace Ahorcado
             int indice = Math.Min(6 - _intentosRestantes, etapas.Length - 1);
             Console.WriteLine(etapas[indice]);
         }
+
+        private void Pistas()
+        {
+            Console.WriteLine("Pista: La palabra tiene " + _palabraSecreta.Length + " letras.");
+            if(_intentosRestantes == 3)
+                Console.WriteLine("Pista: La palabra empieza con '" + _palabraSecreta[0] + "'.");
+        }
     }
 }
 

@@ -58,5 +58,13 @@ namespace Ahorcado
             Console.WriteLine(etapas[6 - _motor.IntentosRestantes]);
         }
 
+        public void MostrarPista()
+        {
+            if (_motor.IntentosRestantes == 3)
+            {
+                Console.WriteLine("Pista: La palabra empieza con '" + _motor.PalabraSecreta[0] + "'.");
+            }
+        }
+
     }
 }

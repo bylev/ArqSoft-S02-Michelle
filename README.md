@@ -36,3 +36,11 @@ La interfaz de usuario se ha separado del motor del juego, lo que permite una ma
 
 # Agregar un nuevo juego
 Para agregar un nuevo juego, se puede crear una nueva clase que implemente la interfaz *IJuego* y luego modificar la clase *InterfazUsuario* para permitir al usuario seleccionar el juego que desea jugar. Esto se puede hacer sin modificar la clase *Juego*, lo que cumple con el principio de abierto/cerrado (OCP). De esta manera, se pueden agregar nuevos juegos sin afectar el código existente, lo que mejora la mantenibilidad y escalabilidad del proyecto.
+
+---
+
+# Agregar Método de MostrarPistas
+
+Agregué un método en la ConsolaUI en donde se hace un if-else que ve si los intentos restantes son 3, te imprime
+un mensaje diciendo con que letra empieza la palabra. Y se llama en el while de Program.cs ya que es donde está el flujo
+del juego.

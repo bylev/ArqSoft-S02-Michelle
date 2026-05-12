@@ -7,6 +7,7 @@ Console.WriteLine("=== AHORCADO ===");
 while (!motor.Ganado() && !motor.Perdido())
 {
     ui.MostrarTablero();
+    ui.MostrarPista();
     char letra = ui.PedirLetra();
     if (motor.LetraYaUsada(letra))
     {
@@ -16,6 +17,7 @@ while (!motor.Ganado() && !motor.Perdido())
     motor.RegistrarLetra(letra);
 }
 ui.MostrarTablero();
+
 if(motor.Ganado())
     ui.MostrarMensaje("\n¡Ganaste! La palabra era: " + motor.PalabraSecreta);
 else
