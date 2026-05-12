@@ -44,3 +44,12 @@ Para agregar un nuevo juego, se puede crear una nueva clase que implemente la in
 Agregué un método en la ConsolaUI en donde se hace un if-else que ve si los intentos restantes son 3, te imprime
 un mensaje diciendo con que letra empieza la palabra. Y se llama en el while de Program.cs ya que es donde está el flujo
 del juego.
+
+---
+
+# Funcionamiento
+
+![image](C:\Users\wonho\source\repos\Ahorcado\images\ss1.png)
+![image](C:\Users\wonho\source\repos\Ahorcado\images\ss2.png)
+
+
