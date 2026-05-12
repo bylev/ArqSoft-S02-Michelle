@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Ahorcado
 {
-    internal class MotorAhorcado
+    internal class MotorAhorcado 
     {
         private readonly string _palabraSecreta;
         private readonly List<char> _letrasUsadas = new();
