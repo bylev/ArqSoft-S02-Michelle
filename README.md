@@ -8,8 +8,7 @@ Un juego sencillo escrito en C#
 
 | Situación | Principio violado |
 | --- | --- |
-| *Juego* controla turnos, dibuja el tablero, muestra mensajes,
-y elige la palabra | Single Responsability Principle (SRP) |
+| *Juego* controla turnos, dibuja el tablero, muestra mensajes  elige la palabra | Single Responsability Principle (SRP) |
 | Las palabras están hardcodeadas dentro del constructor | Dependency Inversion Principle (DIP) |
 | Para agregar un segundo juego habría que modificar *Juego* directamente | Open/Closed Principle (OCP) |
 
