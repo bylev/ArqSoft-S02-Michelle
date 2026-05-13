@@ -65,7 +65,7 @@ Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los m√
 
 
 ![image](images/menu.png)
-![image](images/viborita.png)
+![image](images/vibotira.png)
 
 --- 
 
