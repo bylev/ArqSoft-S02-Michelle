@@ -49,8 +49,13 @@ del juego.
 
 # Funcionamiento
 
+<<<<<<< HEAD
 ![image](images\ss1.png)
 ![image](images\ss2.png)
+=======
+![image](images/ss1.png)
+![image](images/ss2.png)
+>>>>>>> be9bfdd2ea01ee78ae046f5f22042b293e88a572
 
 ---
 
@@ -63,6 +68,7 @@ Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los m�
 # Funcionamiento del nuevo juego
 
 
+<<<<<<< HEAD
 ![image](images\menu.png)
 ![image](images\viborita.png)
 
@@ -72,101 +78,40 @@ Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los m�
 
 En *ConsolaUIViborita*, se agregó un Color.ForegroundColor para cambiar el color del texto dependiendo el atributo de la viborita.
 
+![img](images/cambiocolor.png)
 
-´´´csharp
+
+```csharp
 for (int y = 0; y < _motor.Alto; y++)
-            {
-                Console.Write("|");
-                for (int x = 0; x < _motor.Ancho; x++)
-                {
-                    var pos = (x, y);
-                    if (_motor.Cuerpo.First() == pos)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("@"); // cabeza
-                    }
-                    else if (_motor.Cuerpo.Contains(pos))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("o"); // cuerpo
-                    }
-                    else if (_motor.Comida == pos)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("*"); // comida
-                    }
-                    else
-                    {
-                        Console.ResetColor();
-                        Console.Write(" ");
-                    }
-                }
-                Console.ResetColor();
-                Console.WriteLine("|");
-            }
+{
+    Console.Write("|");
+    for (int x = 0; x < _motor.Ancho; x++)
+    {
+        var pos = (x, y);
+        if (_motor.Cuerpo.First() == pos)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("@"); // cabeza
+        }
+        else if (_motor.Cuerpo.Contains(pos))
+        {
+            Console.ForegroundColor = ConsoleColor.Green;
+            Console.Write("o"); // cuerpo
+        }
+        else if (_motor.Comida == pos)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("*"); // comida
+        }
+        else
+        {
+            Console.ResetColor();
+            Console.Write(" ");
+        }
+    }
+    Console.ResetColor();
+    Console.WriteLine("|");
+}
+```
 
-´´´csharp
-for (int y = 0; y < _motor.Alto; y++)
-            {
-                Console.Write("|");
-                for (int x = 0; x < _motor.Ancho; x++)
-                {
-                    var pos = (x, y);
-                    if (_motor.Cuerpo.First() == pos)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("@"); // cabeza
-                    }
-                    else if (_motor.Cuerpo.Contains(pos))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("o"); // cuerpo
-                    }
-                    else if (_motor.Comida == pos)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("*"); // comida
-                    }
-                    else
-                    {
-                        Console.ResetColor();
-                        Console.Write(" ");
-                    }
-                }
-                Console.ResetColor();
-                Console.WriteLine("|");
-            }
-
-
-for (int y = 0; y < _motor.Alto; y++)
-            {
-                Console.Write("|");
-                for (int x = 0; x < _motor.Ancho; x++)
-                {
-                    var pos = (x, y);
-                    if (_motor.Cuerpo.First() == pos)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Yellow;
-                        Console.Write("@"); // cabeza
-                    }
-                    else if (_motor.Cuerpo.Contains(pos))
-                    {
-                        Console.ForegroundColor = ConsoleColor.Green;
-                        Console.Write("o"); // cuerpo
-                    }
-                    else if (_motor.Comida == pos)
-                    {
-                        Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write("*"); // comida
-                    }
-                    else
-                    {
-                        Console.ResetColor();
-                        Console.Write(" ");
-                    }
-                }
-                Console.ResetColor();
-                Console.WriteLine("|");
-            }
-´´´
 
