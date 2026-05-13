@@ -49,13 +49,9 @@ del juego.
 
 # Funcionamiento
 
-<<<<<<< HEAD
-![image](images\ss1.png)
-![image](images\ss2.png)
-=======
 ![image](images/ss1.png)
 ![image](images/ss2.png)
->>>>>>> be9bfdd2ea01ee78ae046f5f22042b293e88a572
+
 
 ---
 
@@ -68,7 +64,6 @@ Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los m√
 # Funcionamiento del nuevo juego
 
 
-<<<<<<< HEAD
 ![image](images\menu.png)
 ![image](images\viborita.png)
 
