@@ -52,4 +52,20 @@ del juego.
 ![image](C:\Users\wonho\source\repos\Ahorcado\images\ss1.png)
 ![image](C:\Users\wonho\source\repos\Ahorcado\images\ss2.png)
 
+---
+
+# Agregar nuevo juego 
+
+Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los métodos booleanos de Ganado() o Perdido(). Luego, se implementa la interfaz de *IMotorViborita* que contiene la lógica del juego de la viborita. Finalmente, se modifica la clase *InterfazUsuario* para permitir al usuario seleccionar el juego que desea jugar, y se puede agregar una nueva opción para el juego de la viborita. Esto se hace sin modificar la clase *Juego*, lo que cumple con el principio de abierto/cerrado (OCP) y permite agregar nuevos juegos sin afectar el código existente. Además, se implementa en la consola un menú para la elección del juego
+
+---
+
+# Funcionamiento del nuevo juego
+
+
+![image](C:\Users\wonho\source\repos\Ahorcado\images\menu.png)
+![image](C:\Users\wonho\source\repos\Ahorcado\images\vibotira.png)
+
+
+
 

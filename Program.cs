@@ -1,52 +1,79 @@
-﻿var repositorio = new Ahorcado.PalabrasEnMemoria();
-var motor = new Ahorcado.MotorAhorcado(repositorio);
-var ui = new Ahorcado.ConsolaUI(motor);
+﻿Console.WriteLine("¿Qué juego quieres jugar?");
+Console.WriteLine("  1 — Ahorcado");
+Console.WriteLine("  2 — Viborita");
+Console.Write("Opción: ");
+var opcion = Console.ReadLine();
 
-Console.WriteLine("=== AHORCADO ===");
-
-while (!motor.Ganado() && !motor.Perdido())
+if (opcion == "2")
 {
-    ui.MostrarTablero();
-    ui.MostrarPista();
-    char letra = ui.PedirLetra();
-    if (motor.LetraYaUsada(letra))
+    var motor = new Ahorcado.MotorViborita();
+    var ui = new Ahorcado.ConsolaUIViborita(motor);
+
+    Console.CursorVisible = false;
+
+    while (!motor.Ganado() && !motor.Perdido())
     {
-        ui.MostrarMensaje("Ya usaste esa letra.");
-        continue;
+        ui.MostrarTablero();
+        var tecla = ui.LeerTecla();
+
+        if (tecla == ConsoleKey.Q) break;
+        if (tecla != ConsoleKey.NoName)
+            motor.CambiarDireccion(tecla);
+
+        motor.Avanzar();
+        Thread.Sleep(150); // velocidad del juego
     }
-    motor.RegistrarLetra(letra);
+
+    ui.MostrarTablero();
+    ui.MostrarMensaje(motor.Ganado()
+        ? "\n¡Ganaste! Llegaste a 10 puntos." : "\nGame over.");
 }
-ui.MostrarTablero();
-
-if(motor.Ganado())
-    ui.MostrarMensaje("\n¡Ganaste! La palabra era: " + motor.PalabraSecreta);
 else
-    ui.MostrarMensaje("\n¡Perdiste! La palabra era: " + motor.PalabraSecreta);
-
-if(ui.PreguntarOtraVez())
 {
-    var nuevoMotor = new Ahorcado.MotorAhorcado(repositorio);
-    var nuevaUI = new Ahorcado.ConsolaUI(nuevoMotor);
-    while (!nuevoMotor.Ganado() && !nuevoMotor.Perdido())
+    var repositorio = new Ahorcado.PalabrasEnMemoria();
+    var motor = new Ahorcado.MotorAhorcado(repositorio);
+    var ui = new Ahorcado.ConsolaUI(motor);
+
+    Console.WriteLine("=== AHORCADO ===");
+
+    while (!motor.Ganado() && !motor.Perdido())
     {
-        nuevaUI.MostrarTablero();
-        char letra = nuevaUI.PedirLetra();
-        if (nuevoMotor.LetraYaUsada(letra))
+        ui.MostrarTablero();
+        ui.MostrarPista();
+        char letra = ui.PedirLetra();
+        if (motor.LetraYaUsada(letra))
         {
-            nuevaUI.MostrarMensaje("Ya usaste esa letra.");
+            ui.MostrarMensaje("Ya usaste esa letra.");
             continue;
         }
-        nuevoMotor.RegistrarLetra(letra);
+        motor.RegistrarLetra(letra);
     }
-    nuevaUI.MostrarTablero();
-    if(nuevoMotor.Ganado())
-        nuevaUI.MostrarMensaje("\n¡Ganaste! La palabra era: " + nuevoMotor.PalabraSecreta);
-    else
-        nuevaUI.MostrarMensaje("\n¡Perdiste! La palabra era: " + nuevoMotor.PalabraSecreta);
-}
+    ui.MostrarTablero();
 
-if (ui.PreguntarOtraVez())
-{
-    var nuevoMotor = new Ahorcado.MotorAhorcado(repositorio);
-    var nuevaUI = new Ahorcado.ConsolaUI(nuevoMotor);
+    if (motor.Ganado())
+        ui.MostrarMensaje("\n¡Ganaste! La palabra era: " + motor.PalabraSecreta);
+    else
+        ui.MostrarMensaje("\n¡Perdiste! La palabra era: " + motor.PalabraSecreta);
+
+    if (ui.PreguntarOtraVez())
+    {
+        var nuevoMotor = new Ahorcado.MotorAhorcado(repositorio);
+        var nuevaUI = new Ahorcado.ConsolaUI(nuevoMotor);
+        while (!nuevoMotor.Ganado() && !nuevoMotor.Perdido())
+        {
+            nuevaUI.MostrarTablero();
+            char letra = nuevaUI.PedirLetra();
+            if (nuevoMotor.LetraYaUsada(letra))
+            {
+                nuevaUI.MostrarMensaje("Ya usaste esa letra.");
+                continue;
+            }
+            nuevoMotor.RegistrarLetra(letra);
+        }
+        nuevaUI.MostrarTablero();
+        if (nuevoMotor.Ganado())
+            nuevaUI.MostrarMensaje("\n¡Ganaste! La palabra era: " + nuevoMotor.PalabraSecreta);
+        else
+            nuevaUI.MostrarMensaje("\n¡Perdiste! La palabra era: " + nuevoMotor.PalabraSecreta);
+    }
 }
