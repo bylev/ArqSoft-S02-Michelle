@@ -63,8 +63,8 @@ Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los m√
 # Funcionamiento del nuevo juego
 
 
-![image](C:\Users\wonho\source\repos\Ahorcado\images\menu.png)
-![image](C:\Users\wonho\source\repos\Ahorcado\images\vibotira.png)
+![image2](C:\Users\wonho\source\repos\Ahorcado\images\menu.png)
+![image2](C:\Users\wonho\source\repos\Ahorcado\images\vibotira.png)
 
 
 
