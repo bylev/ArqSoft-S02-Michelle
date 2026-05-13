@@ -26,14 +26,27 @@ namespace Ahorcado
                 {
                     var pos = (x, y);
                     if (_motor.Cuerpo.First() == pos)
-                        Console.Write("@");           // cabeza
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("@"); // cabeza
+                    }
                     else if (_motor.Cuerpo.Contains(pos))
-                        Console.Write("o");           // cuerpo
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("o"); // cuerpo
+                    }
                     else if (_motor.Comida == pos)
-                        Console.Write("*");           // comida
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("*"); // comida
+                    }
                     else
+                    {
+                        Console.ResetColor();
                         Console.Write(" ");
+                    }
                 }
+                Console.ResetColor();
                 Console.WriteLine("|");
             }
 

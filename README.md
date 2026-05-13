@@ -49,8 +49,8 @@ del juego.
 
 # Funcionamiento
 
-![image](C:\Users\wonho\source\repos\Ahorcado\images\ss1.png)
-![image](C:\Users\wonho\source\repos\Ahorcado\images\ss2.png)
+![image](images\ss1.png)
+![image](images\ss2.png)
 
 ---
 
@@ -63,9 +63,110 @@ Para agregar un nuevo juego, se crea la interfaz *IMotorJuego* que define los m�
 # Funcionamiento del nuevo juego
 
 
-![image](C:\Users\wonho\source\repos\Ahorcado\images\menu.png)
-![image](C:\Users\wonho\source\repos\Ahorcado\images\vibotira.png)
+![image](images\menu.png)
+![image](images\viborita.png)
+
+--- 
+
+# Cambio de color 
+
+En *ConsolaUIViborita*, se agregó un Color.ForegroundColor para cambiar el color del texto dependiendo el atributo de la viborita.
 
 
+´´´csharp
+for (int y = 0; y < _motor.Alto; y++)
+            {
+                Console.Write("|");
+                for (int x = 0; x < _motor.Ancho; x++)
+                {
+                    var pos = (x, y);
+                    if (_motor.Cuerpo.First() == pos)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("@"); // cabeza
+                    }
+                    else if (_motor.Cuerpo.Contains(pos))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("o"); // cuerpo
+                    }
+                    else if (_motor.Comida == pos)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("*"); // comida
+                    }
+                    else
+                    {
+                        Console.ResetColor();
+                        Console.Write(" ");
+                    }
+                }
+                Console.ResetColor();
+                Console.WriteLine("|");
+            }
 
+´´´csharp
+for (int y = 0; y < _motor.Alto; y++)
+            {
+                Console.Write("|");
+                for (int x = 0; x < _motor.Ancho; x++)
+                {
+                    var pos = (x, y);
+                    if (_motor.Cuerpo.First() == pos)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("@"); // cabeza
+                    }
+                    else if (_motor.Cuerpo.Contains(pos))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("o"); // cuerpo
+                    }
+                    else if (_motor.Comida == pos)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("*"); // comida
+                    }
+                    else
+                    {
+                        Console.ResetColor();
+                        Console.Write(" ");
+                    }
+                }
+                Console.ResetColor();
+                Console.WriteLine("|");
+            }
+
+
+for (int y = 0; y < _motor.Alto; y++)
+            {
+                Console.Write("|");
+                for (int x = 0; x < _motor.Ancho; x++)
+                {
+                    var pos = (x, y);
+                    if (_motor.Cuerpo.First() == pos)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Yellow;
+                        Console.Write("@"); // cabeza
+                    }
+                    else if (_motor.Cuerpo.Contains(pos))
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write("o"); // cuerpo
+                    }
+                    else if (_motor.Comida == pos)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write("*"); // comida
+                    }
+                    else
+                    {
+                        Console.ResetColor();
+                        Console.Write(" ");
+                    }
+                }
+                Console.ResetColor();
+                Console.WriteLine("|");
+            }
+´´´
 
