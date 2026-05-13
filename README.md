@@ -3,7 +3,7 @@
 Un juego sencillo escrito en C#
 
 ---
-
+ 
 # Identificar las violaciones SOLID
 
 | Situación | Principio violado |
